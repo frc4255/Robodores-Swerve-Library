@@ -10,11 +10,14 @@ plugins {
   id 'edu.wpi.first.GradleVsCode' version '2.1.0'
 }
 
+group = "com.myteam" //TODO change this so that it matches the correct domain
+
 // WPILib Version
 ext.wpilibVersion = "2025.+"
 
 repositories {
   mavenCentral()
+  maven { url "https://jitpack.io" }
 }
 if (project.hasProperty('releaseMode')) {
   wpilibRepositories.addAllReleaseRepositories(project)
